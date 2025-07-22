@@ -1,0 +1,14 @@
+{
+  "name": "good-mic-simulator",
+  "version": "1.0.0",
+  "description": "i lied",
+  "main": "index.html",
+  "scripts": {
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.4"
+  }
+} 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>balatro voice playback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>balatro voice playback</h1>
+    <label for="mic-select">select microphone:</label>
+    <select id="mic-select"></select>
+    <label for="funny-slider">funny mic:</label>
+    <input type="range" id="funny-slider" min="0" max="100" value="0">
+    <span id="funny-value">0</span>
+    <label for="glitch-frequency">glitch frequency (seconds):</label>
+    <input type="number" id="glitch-frequency" min="0" max="10" step="0.1" value="2.5">
+    <label for="sound-frequency">sound frequency (seconds):</label>
+    <input type="number" id="sound-frequency" min="0" max="30" step="0.1" value="8">
+    <div id="sound-checkboxes"></div>
+    <div id="effect-checkboxes"></div>
+    <label for="output-device">output device:</label>
+    <select id="output-device"></select>
+    <label for="playback-toggle"><input type="checkbox" id="playback-toggle" checked> playback (hear yourself)</label>
+    <button id="help-btn" type="button">how to use in discord</button>
+    <div id="help-modal" style="display:none;">
+      <div class="modal-content">
+        <h2>how to use in discord/voice calls</h2>
+        <ol>
+          <li>install <a href="https://vb-audio.com/Cable/index.htm" target="_blank">VB-Cable</a> and reboot if needed.</li>
+          <li>in this app, select <b>CABLE Input (VB-Audio Virtual Cable)</b> as output device.</li>
+          <li>in discord/zoom/etc, set input device to <b>CABLE Output (VB-Audio Virtual Cable)</b>.</li>
+          <li>enable playback in this app (toggle above).</li>
+          <li>talk! your friends will hear the effects.</li>
+        </ol>
+        <p>to hear yourself, use 'listen to this device' in windows sound settings or a tool like voicemeeter.</p>
+        <button id="close-help" type="button">close</button>
+      </div>
+    </div>
+    <button id="start-btn">start playback</button>
+    <button id="stop-btn" disabled>stop playback</button>
+    <div id="status"></div>
+  </div>
+  <!-- place vacuum.mp3, alarm.mp3, and yell.mp3 in the same folder as this file for sound effect glitches -->
+  <script src="app.js"></script>
+</body>
+</html> 

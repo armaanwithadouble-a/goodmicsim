@@ -1,0 +1,209 @@
+/* balatro-inspired, all lowercase, pixel-art style */
+@font-face {
+  font-family: 'm6x11plus';
+  src: url('./m6x11plus.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #18141c;
+  color: #f7e8c9;
+  font-family: 'm6x11plus', monospace;
+  text-transform: lowercase;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #241b2f;
+  border: 4px solid #ffb545;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 32px #000a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #ffb545;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+label, select, button {
+  font-family: 'm6x11plus', monospace;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-transform: lowercase;
+}
+
+button {
+  background: #ffb545;
+  color: #241b2f;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s;
+}
+
+button:disabled {
+  background: #bfa06a;
+  cursor: not-allowed;
+}
+
+#status {
+  margin-top: 1.5rem;
+  color: #ff5e5e;
+  font-size: 1rem;
+  min-height: 1.2em;
+}
+
+#funny-slider {
+  width: 200px;
+  margin: 0.5rem 0;
+  accent-color: #ff5e5e;
+}
+
+#funny-value {
+  color: #ff5e5e;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  font-family: 'm6x11plus', monospace;
+}
+
+#glitch-frequency {
+  width: 80px;
+  margin: 0.5rem 0;
+  font-family: 'm6x11plus', monospace;
+  font-size: 1.1rem;
+  background: #18141c;
+  color: #ffb545;
+  border: 2px solid #ffb545;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#sound-frequency {
+  width: 80px;
+  margin: 0.5rem 0;
+  font-family: 'm6x11plus', monospace;
+  font-size: 1.1rem;
+  background: #18141c;
+  color: #ff5e5e;
+  border: 2px solid #ff5e5e;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#sound-checkboxes, #effect-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 1rem 0 0.5rem 0;
+  justify-content: center;
+}
+
+#sound-checkboxes label, #effect-checkboxes label {
+  font-family: 'm6x11plus', monospace;
+  font-size: 1rem;
+  color: #ffb545;
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+#sound-checkboxes input[type="checkbox"], #effect-checkboxes input[type="checkbox"] {
+  accent-color: #ff5e5e;
+  width: 1.1em;
+  height: 1.1em;
+  margin: 0;
+}
+
+#output-device {
+  width: 250px;
+  margin: 0.5rem 0;
+  font-family: 'm6x11plus', monospace;
+  font-size: 1.1rem;
+  background: #18141c;
+  color: #ffb545;
+  border: 2px solid #ffb545;
+  border-radius: 6px;
+  text-align: left;
+}
+
+#playback-toggle {
+  accent-color: #ff5e5e;
+  margin-right: 0.5rem;
+}
+
+#help-btn {
+  background: #ff5e5e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-family: 'm6x11plus', monospace;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem 0;
+  cursor: pointer;
+  text-transform: lowercase;
+  transition: background 0.2s;
+}
+#help-btn:hover {
+  background: #ffb545;
+  color: #241b2f;
+}
+
+#help-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24, 20, 28, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+#help-modal .modal-content {
+  background: #241b2f;
+  border: 4px solid #ffb545;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  color: #f7e8c9;
+  font-family: 'm6x11plus', monospace;
+  text-transform: lowercase;
+  box-shadow: 0 0 32px #000a;
+  max-width: 400px;
+  text-align: left;
+}
+#help-modal h2 {
+  color: #ffb545;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+#help-modal button {
+  background: #ffb545;
+  color: #241b2f;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-family: 'm6x11plus', monospace;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+#help-modal a {
+  color: #ff5e5e;
+  text-decoration: underline;
+} 
