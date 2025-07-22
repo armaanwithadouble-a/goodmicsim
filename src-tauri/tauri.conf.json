@@ -1,28 +1,19 @@
 {
-  "$schema": "https://schema.tauri.app/config/2",
-  "productName": "good mic simulator",
-  "version": "0.1.0",
-  "identifier": "com.yourorg.goodmic",
+  "$schema": "https://schema.tauri.app/config/v2.json",
   "build": {
-    "frontendDist": "../web"
+    "distDir": "../web"
   },
-  "app": {
-    "windows": [
-      {
-        "title": "good mic simulator",
-        "width": 800,
-        "height": 600,
-        "resizable": true,
-        "fullscreen": false
-      }
-    ],
-    "security": {
-      "csp": null
+  "windows": [
+    {
+      "title": "good mic simulator",
+      "width": 800,
+      "height": 600,
+      "resizable": true
     }
-  },
+  ],
   "bundle": {
     "active": true,
-    "targets": "all",
+    "targets": ["msi", "nsis"],
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
